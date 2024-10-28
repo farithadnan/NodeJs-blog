@@ -13,6 +13,9 @@ const PORT = 5000 || process.env.PORT;
 // Connect to DB
 connectDB(); 
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Configure express to use static files from the public directory
 app.use(express.static('public'));
 
